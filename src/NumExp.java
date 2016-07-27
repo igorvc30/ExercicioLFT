@@ -6,4 +6,8 @@ public class NumExp extends Exp{
 	public String print() {
 		return String.valueOf(num);
 	}
+	
+	public int evaluate(Memory m) {
+		return num;
+	}
 }

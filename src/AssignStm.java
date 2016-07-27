@@ -5,5 +5,9 @@ public class AssignStm extends Stm {
 	public String print() {
 		return id + ":=" + exp.print();
 	}
+	@Override
+	public void evaluate(Memory m) {
+		m.update(id, exp.evaluate(m));
+	}
 	
 }

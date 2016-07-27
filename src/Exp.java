@@ -1,8 +1,7 @@
 
 public abstract class Exp {
-	public String print(){
-		return this.toString();
-	};
+	abstract public String print();
+	abstract public int evaluate(Memory m);
 }
 
 
