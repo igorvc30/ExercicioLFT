@@ -15,8 +15,9 @@ public class main {
 							new TimesExp(new NumExp(10), new IdExp("a")))),
 					new PrintStm(new SingleExpList(new IdExp("b")))));
 */
-		teste.evaluate(new Memory());
-		System.out.println(new Memory().lookup("a"));
+		Memory m = new Memory();
+		teste.evaluate(m);
+		System.out.println(m);
 		
 	}
 

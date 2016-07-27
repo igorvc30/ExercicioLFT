@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class Memory {
 	//USA hashmap para simular uma memoria
-	private static HashMap<String, Integer> memoria;
+	private HashMap<String, Integer> memoria;
 
 	public Memory(){
 		 memoria = new HashMap<String, Integer>();
@@ -16,12 +16,17 @@ public class Memory {
 	}
 
 	public void update (String key, Integer value){
-		System.out.println(key+"="+value);
 		if((int)lookup(key) == 0)
 			memoria.put(key, value);
 		else 
 			memoria.replace(key, value);
 	}
+
+	@Override
+	public String toString() {
+		return memoria.toString() ;
+	}
+	
 	
 }
 /*
