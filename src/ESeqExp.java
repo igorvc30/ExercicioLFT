@@ -6,4 +6,9 @@ public class ESeqExp extends Exp {
 	public String print(){
 		return "(" + stm.print() + "," + exp.print() + ")";
 	}
+	@Override
+	public int evaluate(Memory m) {
+		// TODO Auto-generated method stub
+		
+	}
 }

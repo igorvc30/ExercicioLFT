@@ -7,4 +7,10 @@ public class PairExpList extends ExpList {
 	public String print(){
 		return head.print() + "," + tail.print();
 	}
+
+	@Override
+	public int evaluate(Memory m) {
+		// TODO Auto-generated method stub
+		r
+	}
 }

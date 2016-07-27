@@ -1,5 +1,4 @@
 public abstract class ExpList { 
-	public String print(){
-		return this.print();
-	}
+	abstract public String print();
+	abstract public int evaluate(Memory m);
 }

@@ -11,7 +11,7 @@ public class Memory {
 	public Integer lookup (String key){
 		Integer looked = memoria.get(key);
 		if (looked == null)
-			return 0;
+			return 0; // poderia ser null, mas caso nao exista valor, quebra o programa
 		else return looked;
 	}
 

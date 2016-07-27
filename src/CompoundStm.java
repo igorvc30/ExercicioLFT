@@ -6,4 +6,9 @@ public class CompoundStm extends Stm {
 		// TODO Auto-generated method stub
 		return stm1.print() + ";" + stm2.print();
 	}
+	@Override
+	public void evaluate(Memory m) {
+		stm1.evaluate(m);
+		stm2.evaluate(m);
+	}
 }
