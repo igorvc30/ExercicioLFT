@@ -7,8 +7,7 @@ public class SingleExpList extends ExpList {
 	}
 
 	@Override
-	public int evaluate(Memory m) {
-		// TODO Auto-generated method stub
-		return exp.evaluate(m);
+	public String evaluate(Memory m) {
+		return exp.evaluate(m) + "";
 	}
 }

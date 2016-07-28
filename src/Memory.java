@@ -1,7 +1,6 @@
 import java.util.HashMap;
 
 public class Memory {
-	//USA hashmap para simular uma memoria
 	private HashMap<String, Integer> memoria;
 
 	public Memory(){
@@ -26,11 +25,4 @@ public class Memory {
 	public String toString() {
 		return memoria.toString() ;
 	}
-	
-	
 }
-/*
-metodo interprete abastratro para todos
- int interprete(Memory mem) return valor avalaia expressao,
-classe Stm , interprete(Memory mem) void para comando executa comando
- */

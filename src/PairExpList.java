@@ -2,6 +2,7 @@
 public class PairExpList extends ExpList {
 	public Exp head;
 	public ExpList tail;
+	
 	public PairExpList(Exp e, ExpList l) { head=e; tail = l; }
 	
 	public String print(){
@@ -9,8 +10,7 @@ public class PairExpList extends ExpList {
 	}
 
 	@Override
-	public int evaluate(Memory m) {
-		// TODO Auto-generated method stub
-		r
+	public String evaluate(Memory m) {
+		return head.evaluate(m) + " " + tail.evaluate(m);
 	}
 }
