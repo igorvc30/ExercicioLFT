@@ -3,12 +3,9 @@ public class MinusExp extends Exp{
 	
 	public MinusExp(Exp l, Exp r){
 		left = l; right = r;}
+
 	@Override
-	public String print() {
-		return left.print() + "-" + right.print();
-	}
-	
-	public int evaluate(Memory m) {
-		return left.evaluate(m)-right.evaluate(m) ;
+	public Object accept(SLVisitor visitor) {
+		return visitor.visitMinusExp(this);
 	}
 }

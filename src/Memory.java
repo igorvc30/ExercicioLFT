@@ -14,11 +14,11 @@ public class Memory {
 		else return looked;
 	}
 
-	public void update (String key, Integer value){
+	public void update (String key, int value){
 		if((int)lookup(key) == 0)
-			memoria.put(key, value);
+			memoria.put(key, new Integer(value));
 		else 
-			memoria.replace(key, value);
+			memoria.replace(key, new Integer(value));
 	}
 
 	@Override

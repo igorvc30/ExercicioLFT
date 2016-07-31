@@ -5,12 +5,9 @@ public class ESeqExp extends Exp {
 	public ESeqExp(Stm s, Exp e) {
 		stm = s; exp = e; 
 	}
-	public String print(){
-		return "(" + stm.print() + "," + exp.print() + ")";
-	}
+	
 	@Override
-	public int evaluate(Memory m) {
-		stm.evaluate(m);
-		return exp.evaluate(m);
+	public Object accept(SLVisitor visitor) {
+		return visitor.visitESeqExp(this);
 	}
 }

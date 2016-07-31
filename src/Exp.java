@@ -1,7 +1,6 @@
 
 public abstract class Exp {
-	abstract public String print();
-	abstract public int evaluate(Memory m);
+	abstract public Object accept(SLVisitor visitor);
 }
 
 

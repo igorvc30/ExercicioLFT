@@ -3,11 +3,7 @@ public class IdExp extends Exp{
 	public IdExp(String i){id = i;}
 	
 	@Override
-	public String print() {
-		return id.toString();
-	}
-	@Override
-	public int evaluate(Memory m) {
-		return m.lookup(id);
+	public Object accept(SLVisitor visitor) {
+		return visitor.visitIdExp(this);
 	}
 }

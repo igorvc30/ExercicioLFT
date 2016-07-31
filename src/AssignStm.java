@@ -1,14 +1,16 @@
 public class AssignStm extends Stm {
+	public AssignStm(String id, Exp exp) {
+		super();
+		this.id = id;
+		this.exp = exp;
+	}
+
 	public String id;
 	public Exp exp;
-	
-	public AssignStm(String i, Exp e) { id = i; exp = e; }
-	public String print() {
-		return id + ":=" + exp.print();
-	}
+
 	@Override
-	public void evaluate(Memory m) {
-		m.update(id, exp.evaluate(m));
+	public Object accept(SLVisitor visitor) {
+		return visitor.visitAssignStm(this);
 	}
 	
 }

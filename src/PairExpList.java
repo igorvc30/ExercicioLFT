@@ -5,12 +5,10 @@ public class PairExpList extends ExpList {
 	
 	public PairExpList(Exp e, ExpList l) { head=e; tail = l; }
 	
-	public String print(){
-		return head.print() + "," + tail.print();
+	@Override
+	public Object accept(SLVisitor visitor) {
+		return visitor.visitPairExpList(this);
 	}
 
-	@Override
-	public String evaluate(Memory m) {
-		return head.evaluate(m) + " " + tail.evaluate(m);
-	}
+
 }
